@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS em formulários</title>
+
+    <style>
+        .formlogin {
+            width: 250px;
+            margin: 50px auto 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .formlogin label {
+            margin-top: 15px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .formlogin fieldset {
+            background-color: lightgrey;
+        }
+
+        .formlogin legend {
+            margin: auto;
+            padding: 10px;
+        }
+        #user, #pass, .btn {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+        }
+        #user:focus, #pass:focus {
+            background-color: rgb(238, 236, 236);
+        }
+        .btn {
+            margin-top: 15px;
+        }
+        #user {
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="post" class="formlogin">
+        <fieldset>
+            <legend>Login</legend>
+            <label for="user">Digite o seu usuário</label>
+            <input type="text" id="user" name="user" autofocus>
+
+            <label for="pass">Digite a senha</label>
+            <input type="password" id="pass" name="pass">
+            <input type="submit" value="Logar" class="btn">
+
+        </fieldset>
+    </form>
+
+</body>
+</html>

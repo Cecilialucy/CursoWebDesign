@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .div1{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(201, 146, 128);
+            transform: translate(50px, 50px) ;
+          
+        }
+        .div2{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(146, 70, 45);
+            
+        }
+        .div3{
+            width: 50%;
+            overflow: hidden;
+            border: solid 1px darksalmon;
+        }
+
+        .div3-interna{
+            background-color: darksalmon;
+            transform: translateX(50%);
+        }
+        .div4{
+            width: 50%;
+            overflow: hidden;
+            border: solid 1px rgb(231, 194, 183);
+        }
+        .div4-interna{
+            background-color: rgb(231, 152, 125);
+            transform: rotate(-5deg);
+        }
+        .div5{
+            width: 50%;
+            overflow: hidden;
+            border: solid 1px rgb(238, 130, 98);
+        }
+        .div5-interna{
+            background-color: rgb(238, 128, 92);
+            transform:rotate(10deg);
+            transform-origin: left top;
+        }
+        .div6{
+            width: 50%;
+            overflow: hidden;
+            border: solid 1px rgb(231, 119, 85);
+        }
+        .div6-interna{
+            background-color: rgb(231, 89, 42);
+            transform:rotate(30deg) translate(90px);
+          
+        }
+        .div7{
+            width: 50%;
+            overflow: hidden;
+            border: solid 1px rgb(233, 78, 31);
+        }
+        .div7-interna{
+            background-color: rgb(233, 75, 22);
+            transform: translate(90px)  rotate(30deg);
+           
+        }
+
+        .div8{
+            width: 100px;
+            height: 100px ;  
+            background-color: rgb(87, 35, 20); 
+            transform:  skewX(10deg) skewY(30deg)    }
+
+            .div9{
+                width: 100px;
+                height: 100px ;  
+                background-color: rgb(110, 31, 9); 
+                transform: scale(.5)  translateX(50%);
+                transition: transform .5s;
+
+            }
+            .div9:hover{
+                transform: scale(2);
+            }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="div1">div 1</div>
+    <div class="div2">div 2</div>
+    <hr>
+    <div class="div3">
+        <div class="div3-interna">conteúdo</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sunt recusandae tempora laudantium voluptatibus nulla ipsa ab similique soluta laborum quae tenetur eligendi voluptatem fugit, illum asperiores aliquid natus distinctio!</p>
+    </div>
+    <hr>
+    <div class="div4">
+        <div class="div4-interna">conteúdo</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sunt recusandae tempora laudantium voluptatibus nulla ipsa ab similique soluta laborum quae tenetur eligendi voluptatem fugit, illum asperiores aliquid natus distinctio!</p>
+    </div>
+    <hr>
+    <div class="div5">
+        <div class="div5-interna">conteúdo</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sunt recusandae tempora laudantium voluptatibus nulla ipsa ab similique soluta laborum quae tenetur eligendi voluptatem fugit, illum asperiores aliquid natus distinctio!</p>
+    </div>
+    <hr>
+    <div class="div6">
+        <div class="div6-interna">conteúdo</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sunt recusandae tempora laudantium voluptatibus nulla ipsa ab similique soluta laborum quae tenetur eligendi voluptatem fugit, illum asperiores aliquid natus distinctio!</p>
+    </div>
+    <hr>
+    <div class="div7">
+        <div class="div7-interna">conteúdo</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sunt recusandae tempora laudantium voluptatibus nulla ipsa ab similique soluta laborum quae tenetur eligendi voluptatem fugit, illum asperiores aliquid natus distinctio!</p>
+    </div>
+    <hr>
+    <div class="div8">div 8</div>
+    <hr>
+    <div class="div9">div 9</div>
+
+    
+</body>
+</html>

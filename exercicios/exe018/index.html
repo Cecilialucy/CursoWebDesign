@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+
+    <style>
+        article:nth-child(1) a {
+            color: coral;
+        }
+
+        article:nth-child(3) > p {
+            color: cadetblue;
+        }
+
+        article:nth-child(5) h3 + p{
+            color: blueviolet;
+            margin-top: 50px;
+            
+        }
+        
+        article:nth-child(7) h3 ~ p{
+            color: aqua;
+           
+        }
+
+        article:not(.destaque){
+            color: deeppink;
+        }
+
+        .destaque {
+            background-color: aquamarine;
+        }
+
+        a[href="#"]{
+            opacity: .3;
+        }
+        a[href^="http"]{
+            color: firebrick;
+        }
+
+        a[title]{
+            color: rgb(134, 184, 84);
+        }
+        a[href$=".pdf"]{
+            text-decoration: none;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <article>
+        <h3>Título</h3>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+    <hr>
+    <article>
+        <h3>Título</h3>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <hr>
+    <article>
+        <h3>Título</h3>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <hr>
+    <article>
+        <p>Antes do título/sem formatação</p>
+        <h3>Título</h3>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <hr>
+    <article class="destaque">
+        <h3>Título</h3>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+        <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="http://serfrontend.com" target="_blank">link externo</a></li>
+        <li><a href="http://serfrontend.com/qq.pdf">link externo</a></li>
+        <li><a href="19-transition.html" title="Veja exercício anterior">link interno</a></li>
+    </ul>
+
+    
+</body>
+</html>

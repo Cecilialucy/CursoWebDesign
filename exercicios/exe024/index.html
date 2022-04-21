@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a[target="_blank"]:after{
+            content: url(imagem/newWindow.png);
+            display: inline-block;
+            margin-left: 5px;
+        }
+        a[href$=".pdf"]:before{
+            content: url(imagem/pdf-icon.gif);
+            margin-right: 5px;
+            display: inline-block;
+        }
+        .chk{
+            display: inline-block;
+            
+            border: 2px solid #bbb;
+            background-color: #ddd;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+        }
+
+        label{
+            height: 15px;
+            display: inline-block;
+        }
+        input[type="checkbox"] + label .chk{
+            border-radius: 5px;
+        }
+        input[type="checkbox"]{
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+            margin: 0;
+        }
+        input[type="checkbox"]:checked + label .chk{
+            background-color: aqua;
+            position: relative;
+        }
+
+        input[type="checkbox"]:checked + label .chk:before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 4px;
+            left: 4px;
+            right: 4px;
+            border: 2px solid black;
+            transform: rotate(45deg);
+            border-top-color: transparent;
+            border-left-color: transparent;
+            box-sizing: border-box;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Estrutura básica</h1>
+    <a href="http://serfrontend.com" target="_blank">link externo</a>
+    <br>
+    <a href="qq.pdf">download do pdf</a>
+    <hr>
+    <input type="checkbox" name="qq" id="chk">
+    <label for="chk"><span class="chk"></span> Li e aceito o contrato</label>
+    
+</body>
+</html>

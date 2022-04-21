@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente radial</title>
+    <style>
+        #grupo-cores{
+            padding: 15px;
+            background-image: url(imagem/tile.png);
+            counter-reset: contador;
+        }
+
+        #grupo-cores div{
+            width: 80%;
+            height: 150px;
+            border: 10px solid rgba(0,0,0,.5);
+            margin: 20px auto;
+            padding: 15px;
+            counter-increment: contador;
+        }
+
+        #grupo-cores div:before{
+            content: '[' counter(contador) '] ' ;
+        }
+
+        #grupo-cores div:nth-child(2){
+            background-color: blueviolet;
+            background-clip: content-box;
+        }
+
+        #grupo-cores div:nth-child(3){
+            background-color: rgb(50%, 50%, 0%);
+            background-clip: content-box;
+        }
+
+        #grupo-cores div:nth-child(4){
+            background-color: rgb(50%, 50%, 0%, .5);
+            background-clip: content-box;
+        }
+
+        #grupo-cores div:nth-child(5){
+            background-color: hsl(120deg, 100%, 20%);
+            background-clip: content-box;
+            
+        }
+
+        #grupo-cores div:nth-child(6){
+            background-color: hsla(120deg, 100%, 20%, .5);
+            background-clip: content-box;  
+        }
+
+        #grupo-cores div:nth-child(7){
+            background-image: linear-gradient(68deg, rgb(171, 221, 223), transparent), linear-gradient(to top, rgb(218, 158, 158), transparent);
+            background-clip: content-box, border-box ;  
+        }
+
+        #grupo-cores div:nth-child(8){
+            background-image: radial-gradient(rgb(71, 114, 194), rgb(211, 118, 118));
+        }
+
+        #grupo-cores div:nth-child(9){
+            background-image: radial-gradient(circle,rgb(71, 114, 194), rgb(211, 118, 118));
+        }
+
+        #grupo-cores div:nth-child(10){
+            background-image: radial-gradient(circle, red, blue 15%, yellow, green);
+        }
+
+        #grupo-cores div:nth-child(11){
+            background-image: radial-gradient(closest-side at 20% 90%, red, blue 15%, yellow, green);
+        }
+
+        #grupo-cores div:nth-child(12){
+            background-image: radial-gradient(farthest-side at 20% 90%, red, blue 15%, yellow, green);
+        }
+
+        #grupo-cores div:nth-child(13){
+            background-image: radial-gradient(closest-corner at 20% 90%, red, blue 15%, yellow, green);
+        }
+
+        #grupo-cores div:nth-child(14){
+            background-image: radial-gradient(farthest-corner at 20% 90%, red, blue 15%, yellow, green);
+        }
+
+        #grupo-cores div:nth-child(15){
+            background-image: repeating-linear-gradient(green 0%, yellow 10%, blue 50%)
+        }
+
+        #grupo-cores div:nth-child(16){
+            background-image: repeating-radial-gradient(green 0%, transparent,  blue 33.33%), linear-gradient(green, blue);
+            background-attachment: scroll, fixed;
+        }
+
+        #grupo-cores div:nth-child(17){
+            background-image: radial-gradient(closest-corner at 50% 25%, black, transparent), url(imagem/bg.jpg);
+            background-size: cover;
+            background-position: center -50px, center bottom;
+            background-repeat: no-repeat;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <h1>Backgrounds, cores e gradientes</h1>
+    <h2>Names, hexadecimais, RGB, RGBa, HSL, HSLa</h2>
+
+
+    <div id="grupo-cores">
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dignissimos maiores dolore quam quod assumenda. Similique modi dolore iure doloribus ad ut autem quisquam porro quod, error sit repudiandae quis.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed laborum dolore adipisci aperiam cumque totam, suscipit sequi doloribus minus facere, labore beatae. Optio unde dolorum, eum illum dolores eos. Reiciendis?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quod dignissimos dolor perspiciatis iste, consequuntur quae eius unde ullam deserunt incidunt expedita ea soluta consectetur suscipit repellendus minima fugiat doloremque.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eum quod ratione nihil, hic odit quae fugit illum reprehenderit. Quidem odio ratione modi aliquid, saepe laudantium vitae tempore fugit? Asperiores!</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae illo, hic distinctio quia autem atque harum perspiciatis. Voluptatibus error similique nesciunt nobis non esse animi reprehenderit necessitatibus iure veniam. Corrupti?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, modi. Facilis illum minima eius ullam quod, sapiente aliquid tempora totam eaque placeat consequatur temporibus animi sit voluptate nostrum hic est?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor non saepe iusto nulla reprehenderit cumque nesciunt at possimus tempore officia? Veritatis consequatur in dolorem vero adipisci a officia provident ratione.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus qui quod molestias consectetur provident ex officiis delectus? Enim repudiandae esse adipisci corporis, perspiciatis optio placeat perferendis fugiat nisi distinctio delectus.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae debitis placeat nam neque sapiente! Ipsum velit necessitatibus modi a. Ratione est nam aliquid. Tempore dolor tempora iusto nam hic fugiat?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quidem doloribus soluta architecto, eos deserunt consequuntur non officiis, enim magnam iure iusto quae quia fuga voluptate obcaecati, aut sapiente dolorum?</p>
+        </div>
+    </div>
+    
+</body>
+</html>

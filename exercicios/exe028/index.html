@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas em, rem, px</title>
+
+    <style>
+        html{
+            font-size: 32px;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        div{
+            border: 1px solid black;
+           /* padding: 16px;*/
+           padding: 1em;
+            width: 320px;
+            /* 320/16 */
+            width: 20em;
+            margin: 100px auto;
+            margin: 6.25em auto;
+            /* 100/16 = 6.25em*/
+            /* font-size: 2em */
+        }
+
+        h1{
+            text-align: center;
+        }
+        p{
+            margin: 0;
+            line-height: 1.5;
+            font-size: 1.25em;
+            /* 16 x 1.25 = 20px */
+        }
+
+        a{
+            font-size: 24px;
+            font-size: 1.2em;
+            /* 24/20 = 1.2em*/
+            font-size: 32px; /* ou 1rem */
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidades de medidas</h1>
+
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt dolore dolor ducimus. Aliquid omnis <a href="#"> numquam ea quidem eaque</a> voluptates vitae eum, accusamus exercitationem quibusdam sed nisi facere, debitis aliquam?</p>
+    </div>
+    
+</body>
+</html>
